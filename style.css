@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    font-family: roboto, sans-serif;
+}
+
+#grid_container {
+    display: grid;
+    margin: -10px;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "sidebar header header header header" 
+    "sidebar main_content main_content main_content main_content"
+    "sidebar main_content main_content main_content main_content"
+    "sidebar main_content main_content main_content main_content"
+    "sidebar main_content main_content main_content main_content"
+    "sidebar main_content main_content main_content main_content"
+    "sidebar main_content main_content main_content main_content"
+}
+
+#sidebar {
+    resize: both;
+    background-color: #23adf7;
+    grid-area: 1 / 1 / 11 / 1;
+    padding: 2vh 1.5vw;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 6vh 3vh repeat(6, 3.5vh) 3vh repeat(3, 3.5vh);
+    gap: 1.5vw;
+}
+
+
+#sidebar > div {
+    height: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar > div:has(h2) {
+    justify-content: left;
+}
+
+#sidebar > div:has(h1) {
+    justify-content: left;
+}
+
+#sidebar > div > svg {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(151deg) brightness(108%) contrast(100%);
+    height: 100%;
+}
+
+#header {
+    grid-area: 1 / 2 / 3 / 6;
+    height: 100%;
+    box-shadow: 10px 10px 15px gray;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr 1fr 2fr;
+    gap: 0;
+    flex: 1 1 auto;
+}
+
+
+
+
+.search_icon {
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.search_input {
+    grid-area: 1 / 3 / 1 / 15;
+}
+
+.search_input > input {
+    width: 100%;
+}
+
+.notification {
+    grid-area: 1 / 16 / 1 / 16;
+}
+
+.profile_icon {
+    grid-area: 1 / 17 / 1 / 17;
+}
+
+.username {
+    grid-area: 1 / 18 / 1 / 20;
+}
+
+.empty {
+    grid-area: 2 / 1 / 2 / 20;
+}
+
+.profile_icon_big {
+    grid-area: 3 / 1 / 3 / 3;
+}
+
+.welcome {
+    grid-area: 3 / 3 / 3 / 10;
+}
+
+.button_new {
+    grid-area: 3 / 15 / 3 / 16;
+}
+
+.button_upload {
+    grid-area: 3 / 17 / 3 / 18;
+}
+
+.button_share {
+    grid-area: 3 / 19 / 3 / 20;
+}
+
+.profile_icon_big > svg {
+    filter: invert(80%) sepia(76%) saturate(7483%) hue-rotate(2deg) brightness(112%) contrast(98%);
+}
+
+.profile_icon > svg {
+    filter: invert(80%) sepia(76%) saturate(7483%) hue-rotate(2deg) brightness(112%) contrast(98%);
+}
+
+#main_content {
+    background-color: lightgray;
+    grid-area: 3 / 2 / 11 / 6;
+}
