@@ -58,64 +58,68 @@ body {
 #header {
     grid-area: 1 / 2 / 3 / 6;
     height: 100%;
-    box-shadow: 10px 10px 15px gray;
+    box-shadow: 10px 5px 5px black;
     align-self: center;
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
+    align-items: center;
+    grid-template-columns: repeat(21, 1fr);
     grid-template-rows: 1fr 1fr 2fr;
     gap: 0;
-    flex: 1 1 auto;
 }
 
 
 
 
 .search_icon {
-    grid-area: 1 / 1 / 1 / 1;
+    grid-area: 1 / 3 / 1 / 3;
 }
 
 .search_input {
-    grid-area: 1 / 3 / 1 / 15;
+    grid-area: 1 / 4 / 1 / 16;
 }
 
 .search_input > input {
     width: 100%;
+    height:3vh;
+    border-radius: 2rem;
+    border: none;
+    background-color: lightgray;
 }
 
 .notification {
-    grid-area: 1 / 16 / 1 / 16;
-}
-
-.profile_icon {
     grid-area: 1 / 17 / 1 / 17;
 }
 
+.profile_icon {
+    grid-area: 1 / 18 / 1 / 18;
+}
+
 .username {
-    grid-area: 1 / 18 / 1 / 20;
+    grid-area: 1 / 19 / 1 / 21;
 }
 
 .empty {
-    grid-area: 2 / 1 / 2 / 20;
+    grid-area: 2 / 1 / 2 / 21;
 }
 
 .profile_icon_big {
-    grid-area: 3 / 1 / 3 / 3;
+    grid-area: 3 / 2 / 3 / 4;
 }
 
 .welcome {
-    grid-area: 3 / 3 / 3 / 10;
+    grid-area: 3 / 4 / 3 / 11;
 }
 
 .button_new {
-    grid-area: 3 / 15 / 3 / 16;
+    grid-area: 3 / 16 / 3 / 17;
 }
 
 .button_upload {
-    grid-area: 3 / 17 / 3 / 18;
+    grid-area: 3 / 18 / 3 / 19;
 }
 
 .button_share {
-    grid-area: 3 / 19 / 3 / 20;
+    grid-area: 3 / 20 / 3 / 21;
 }
 
 .profile_icon_big > svg {
@@ -126,7 +130,47 @@ body {
     filter: invert(80%) sepia(76%) saturate(7483%) hue-rotate(2deg) brightness(112%) contrast(98%);
 }
 
+.search_icon > svg {
+    height: 3vh;
+}
+
+.notification > svg {
+    height: 3vh;
+}
+
+#header > div > button {
+    height: 5vh;
+    width: 150%;
+    border-radius: 3rem;
+    border: none;
+    color: white;
+    background-color: #23adf7;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+#header > div > button:hover {
+    cursor: pointer;
+}
+
 #main_content {
-    background-color: lightgray;
+    background-color: rgb(230, 230, 230);
     grid-area: 3 / 2 / 11 / 6;
+    display: flex;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 4fr 4fr;
+    gap: 0vh;
+    width: 60vw;
+    margin: 2vh 1vw 4vh 1vw;
+}
+
+.project_card {
+    background-color: white;
+    border: rgb(230, 230, 230) solid 1.5vh;
+    padding: 0.5vh 1.6vh;
+    border-radius: 1.7rem;
 }
